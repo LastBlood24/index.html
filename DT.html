@@ -9,11 +9,11 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.7;
             margin: 30px;
-            background-color: #37474F; /* Gris azulado oscuro, como la sombra del laberinto */
-            color: #ECEFF1; /* Gris claro, para el texto */
+            background-color: #37474F;
+            color: #ECEFF1;
         }
         h1, h2 {
-            color: #FFB300; /* Amarillo mostaza, como los rayos de sol al final del día en el Claro */
+            color: #FFB300;
             text-shadow: 1px 1px 2px #000;
         }
         h1 {
@@ -28,39 +28,65 @@
             font-size: 1.8em;
         }
         ul {
-            list-style-type: square; /* Un estilo de viñeta más "estructurado" */
+            list-style-type: square;
             margin-left: 30px;
             padding-left: 0;
         }
         li {
             margin-bottom: 12px;
-            color: #CFD8DC; /* Un tono de gris más suave para los ítems */
+            color: #CFD8DC;
         }
         strong {
             font-weight: bold;
-            color: #FFF; /* Blanco para resaltar */
+            color: #FFF;
         }
-        a {
-            color: #90CAF9; /* Azul claro para los enlaces, si los hubiera */
-            text-decoration: none;
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #455A64;
+            color: #ECEFF1;
+            box-shadow: 2px 2px 5px #000;
         }
-        a:hover {
-            text-decoration: underline;
+        th, td {
+            border: 1px solid #546E7A;
+            padding: 8px;
+            text-align: left;
         }
-        /* Estilo adicional para el contenedor principal si fuera necesario */
-        /* .container {
-            max-width: 960px;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.1); /* Un ligero fondo oscuro */
-            padding: 30px;
-            border-radius: 8px;
-        } */
+        th {
+            background-color: #546E7A;
+            font-weight: bold;
+        }
+        .main-paragraph {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        /* Estilos para el iframe */
+        .external-frame {
+            width: 90%;
+            max-width: 800px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #546E7A;
+            border-radius: 5px;
+            display: block; /* Para centrarlo con margin auto */
+        }
     </style>
 </head>
 <body>
     <h1>Datos Curiosos de Maze Runner</h1>
 
-    <h2>Película</h2>
+    <div class="main-paragraph">
+        <p>La adaptación cinematográfica de "Maze Runner" trajo consigo una serie de datos curiosos que fascinaron a los fanáticos de la saga literaria. Desde la inexperiencia de Wes Ball como director de largometrajes hasta la curiosa decisión de eliminar la telepatía entre Thomas y Teresa, la producción estuvo llena de particularidades. El elenco, aclamado por su fidelidad a los personajes de los libros, incluso realizó un campamento previo a la filmación para imbuirse del espíritu de los habitantes del Claro. Cambios en el guion, como la modificación de las siglas de WICKED a WCKD, y anécdotas del rodaje, como la presencia de peligrosas serpientes en el set, sumaron emoción a la creación de esta primera entrega.</p>
+    </div>
+
+    <div class="main-paragraph">
+        <p>La película también estuvo marcada por decisiones de casting interesantes y momentos inesperados. La insistencia de Blake Cooper a través de redes sociales para obtener el papel de Chuck es un claro ejemplo de la pasión de los seguidores por la historia. Además, el autor de los libros, James Dashner, realizó un cameo en la película, un guiño especial para los lectores. Curiosamente, algunos miembros del elenco de "Maze Runner" compartieron pantalla posteriormente en la exitosa serie "Juego de Tronos", creando una conexión inesperada entre ambas producciones. La filmación, aunque intensa y acelerada gracias al uso de múltiples cámaras, no estuvo exenta de desafíos, como las lesiones sufridas por el protagonista Dylan O'Brien a lo largo de la trilogía.</p>
+    </div>
+
+    <h2>Película (Continuación)</h2>
     <ul>
         <li><strong>Primera película de Wes Ball:</strong> Maze Runner es la primera película que dirige Wes Ball, quien anteriormente solo había realizado cortometrajes como RUIN.</li>
         <li><strong>Elenco bien recibido:</strong> A diferencia de otras adaptaciones juveniles, el elenco de Maze Runner fue bastante bien recibido entre los fanáticos de TMR.</li>
@@ -76,24 +102,63 @@
         <li><strong>Brenton Thwaites y Connor Paolo para Thomas:</strong> Brenton Thwaites (El dador) y Connor Paolo fueron considerados para interpretar el papel de Thomas. Afortunadamente, Dylan O'Brien lo ganó.</li>
         <li><strong>WCKD en lugar de WICKED:</strong> Las siglas de WICKED (aka CRUEL) serán mostradas como WCKD en la película.</li>
         <li><strong>Acento británico en el cast:</strong> Gran parte del elenco principal es británico, pero solo Newt (aka Thomas Brodie-Sangster) conservará el acento.</li>
-        <li><strong>Venta de derechos del segundo libro:</strong> Los derechos del segundo libro ya fueron vendidos a Fox, y el guión estuvo a cargo de T.S. Nowlin.</li>
+        <li><strong>Venta de derechos del segundo libro:</strong> Los derechos del segundo libro ya fueron vendidos a Fox, y el guion estuvo a cargo de T.S. Nowlin.</li>
         <li><strong>Serpientes en el set:</strong> Había 25 serpientes venenosas, incluyendo un cascabel de 5 metros, lo que complicó las grabaciones. Un miembro del equipo fue mordido por una de ellas.</li>
         <li><strong>Cambio en la segunda película:</strong> El director decidió modificar la segunda entrega de la trilogía en las películas, pero para la tercera sería fiel a los escenarios.</li>
         <li><strong>Lesión de Dylan O'Brien:</strong> Dylan sufrió una lesión en el pómulo durante la primera película y otra más grave en la tercera entrega, lo que retrasó la película un año.</li>
         <li><strong>Tiempo de grabación acelerado:</strong> Las escenas arriesgadas y de acción tardaban entre 4 y 5 meses en grabarse, pero la primera película se grabó en 44 días gracias al uso de tres cámaras para obtener más material en menos tiempo.</li>
-        <li><strong>Nombres inspirados en figuras históricas:</strong> Algunos nombres de personajes están basados en personajes famosos, como:
-            <ul>
-                <li>Thomas (Thomas Edison)</li>
-                <li>Newt (Isaac Newton)</li>
-                <li>Alby (Albert Einstein)</li>
-                <li>Chuck (Charles Darwin)</li>
-                <li>Gally (Galileo Galilei)</li>
-                <li>Teresa (Madre Teresa)</li>
-                <li>Winston (Winston Churchill)</li>
-                <li>Ben (Benjamin Franklin)</li>
-                <li>El nombre de Minho está inspirado en el marido coreano de la sobrina de James Dashner, autor de los libros.</li>
-            </ul>
-        </li>
+    </ul>
+
+    <h2>Nombres inspirados en figuras históricas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Personaje</th>
+                <th>Inspiración</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thomas</td>
+                <td>Thomas Edison</td>
+            </tr>
+            <tr>
+                <td>Newt</td>
+                <td>Isaac Newton</td>
+            </tr>
+            <tr>
+                <td>Alby</td>
+                <td>Albert Einstein</td>
+            </tr>
+            <tr>
+                <td>Chuck</td>
+                <td>Charles Darwin</td>
+            </tr>
+            <tr>
+                <td>Gally</td>
+                <td>Galileo Galilei</td>
+            </tr>
+            <tr>
+                <td>Teresa</td>
+                <td>Madre Teresa</td>
+            </tr>
+            <tr>
+                <td>Winston</td>
+                <td>Winston Churchill</td>
+            </tr>
+            <tr>
+                <td>Ben</td>
+                <td>Benjamin Franklin</td>
+            </tr>
+            <tr>
+                <td>Minho</td>
+                <td>Marido coreano de la sobrina de James Dashner</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Película (Continuación)</h2>
+    <ul>
         <li><strong>Blake Cooper y su campaña:</strong> Blake Cooper, quien interpretó a Chuck, insistió tanto en Twitter para conseguir el papel que el director lo invitó a audicionar y lo eligió.</li>
         <li><strong>Cameo de James Dashner:</strong> El autor de los libros hizo un cameo en la primera película, apareciendo en la junta del WCKD.</li>
         <li><strong>Conexión con Juego de Tronos:</strong> Thomas Brodie-Sangster, Aidan Gillen y Nathalie Emmanuel aparecieron en Maze Runner y más tarde estarían en Juego de Tronos.</li>
@@ -108,5 +173,13 @@
         <li><strong>Logan Lerman en portada:</strong> Logan Lerman, uno de los favoritos para el papel de Thomas, aparece en la portada rusa de uno de los libros de la saga de Maze Runner.</li>
         <li><strong>Inspiración en El señor de las moscas y El juego de Ender:</strong> Maze Runner está basado mayormente en El Señor de las Moscas y El Juego de Ender.</li>
     </ul>
+
+    <iframe class="external-frame"
+            src="https://www.youtube.com/embed/64-iJuUY-lE" title="Tráiler de Maze Runner"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
+
 </body>
 </html>
