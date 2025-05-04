@@ -44,7 +44,7 @@
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
-            background-color: #455A64; /* Un tono más oscuro para la tabla */
+            background-color: #455A64;
             color: #ECEFF1;
             box-shadow: 2px 2px 5px #000;
         }
@@ -57,12 +57,21 @@
             background-color: #546E7A;
             font-weight: bold;
         }
-        /* Estilos para los párrafos */
         .main-paragraph {
             margin-bottom: 20px;
             padding: 15px;
-            background-color: rgba(0, 0, 0, 0.1); /* Ligero fondo oscuro para los párrafos */
+            background-color: rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+        }
+        /* Estilos para el iframe */
+        .external-frame {
+            width: 90%;
+            max-width: 800px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #546E7A;
+            border-radius: 5px;
+            display: block; /* Para centrarlo con margin auto */
         }
     </style>
 </head>
@@ -72,6 +81,10 @@
     <div class="main-paragraph">
         <p>La adaptación cinematográfica de "Maze Runner" trajo consigo una serie de datos curiosos que fascinaron a los fanáticos de la saga literaria. Desde la inexperiencia de Wes Ball como director de largometrajes hasta la curiosa decisión de eliminar la telepatía entre Thomas y Teresa, la producción estuvo llena de particularidades. El elenco, aclamado por su fidelidad a los personajes de los libros, incluso realizó un campamento previo a la filmación para imbuirse del espíritu de los habitantes del Claro. Cambios en el guion, como la modificación de las siglas de WICKED a WCKD, y anécdotas del rodaje, como la presencia de peligrosas serpientes en el set, sumaron emoción a la creación de esta primera entrega.</p>
     </div>
+    
+     <details name="imagen">
+            <summary>Wess Ball Tweet</summary>
+            <img src="Wess Ball.png" alt="Wess ball tweet (Wess Ball.png)">
 
     <div class="main-paragraph">
         <p>La película también estuvo marcada por decisiones de casting interesantes y momentos inesperados. La insistencia de Blake Cooper a través de redes sociales para obtener el papel de Chuck es un claro ejemplo de la pasión de los seguidores por la historia. Además, el autor de los libros, James Dashner, realizó un cameo en la película, un guiño especial para los lectores. Curiosamente, algunos miembros del elenco de "Maze Runner" compartieron pantalla posteriormente en la exitosa serie "Juego de Tronos", creando una conexión inesperada entre ambas producciones. La filmación, aunque intensa y acelerada gracias al uso de múltiples cámaras, no estuvo exenta de desafíos, como las lesiones sufridas por el protagonista Dylan O'Brien a lo largo de la trilogía.</p>
@@ -164,5 +177,13 @@
         <li><strong>Logan Lerman en portada:</strong> Logan Lerman, uno de los favoritos para el papel de Thomas, aparece en la portada rusa de uno de los libros de la saga de Maze Runner.</li>
         <li><strong>Inspiración en El señor de las moscas y El juego de Ender:</strong> Maze Runner está basado mayormente en El Señor de las Moscas y El Juego de Ender.</li>
     </ul>
+
+    <iframe class="external-frame"
+            src="https://youtu.be/-1rq7WUZ2-I?si=7SiQovsUbw4-6GHK" title="Datos Curiosos e Easter eggs"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
+
 </body>
 </html>
