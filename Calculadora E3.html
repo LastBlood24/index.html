@@ -5,7 +5,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="utf-8">
     <meta name="Autor" content="Diaz Rodriguez Andres David">
-    <meta name="Fecha" content="7 de mayo de 2025">
+    <meta name="Fecha" content="19 de mayo de 2025">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
@@ -72,7 +72,7 @@
         .empty { background-color: lightgray; }
         .positive { background-color: lightgreen; }
         .negative { background-color: #f77; }
-        .ok { background-color: #fff; border: 1px solid #ccc; } /* Estilo inicial para OK */
+        .ok { background-color: #fff; border: 1px solid #ccc; } 
     </style>
 </head>
 <body>
@@ -142,7 +142,7 @@
             const operacion = operacionSelect.value;
             let resultado;
 
-            resetEstadoColores(); // Reinicia los colores antes de cada cálculo
+            resetEstadoColores(); 
 
             if (isNaN(num1) || isNaN(num2)) {
                 resultado = 'Por favor, introduce números válidos.';
@@ -165,7 +165,7 @@
                         if (num2 === 0) {
                             resultado = '¡División por cero!';
                             negativeDiv.style.backgroundColor = 'black';
-                            negativeDiv.style.color = 'white'; // Para que se vea el texto "Negative"
+                            negativeDiv.style.color = 'white'; 
                         } else {
                             resultado = num1 / num2;
                         }
@@ -181,17 +181,16 @@
                         positiveDiv.style.backgroundColor = 'yellow';
                     } else {
                         negativeDiv.style.backgroundColor = 'black';
-                        negativeDiv.style.color = 'white'; // Para que se vea el texto "Negative"
+                        negativeDiv.style.color = 'white'; 
                     }
                 }
             }
             resultadoDiv.textContent = resultado;
         });
 
-        // Asegurarse de que los colores se reinicien al cargar la página o al reiniciar el formulario
+        
         const botonReiniciar = document.querySelector('.btn-reiniciar');
         botonReiniciar.addEventListener('click', resetEstadoColores);
-        resetEstadoColores(); // Inicializar los colores
-    </script>
+        resetEstadoColores(); 
 </body>
 </html>
