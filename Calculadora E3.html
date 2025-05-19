@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .calculator-container {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-container button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-calcular {
+            background-color: #5cb85c;
+            color: white;
+        }
+        .btn-reiniciar {
+            background-color: #f0ad4e;
+            color: white;
+            margin-left: 5px;
+        }
+        .resultado-container {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .resultado-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .estado-colores {
+            margin-top: 10px;
+        }
+        .estado-colores div {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        .empty { background-color: lightgray; }
+        .positive { background-color: lightgreen; }
+        .negative { background-color: #f77; }
+        .ok { background-color: #fff; border: 1px solid #ccc; } /* Estilo inicial para OK */
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>JavaScript</h2>
+        <h3>Calculadora</h3>
+        <form>
+            <div class="form-group">
+                <label for="primerOperando">Primer operando</label>
+                <input type="number" class="form-control" id="primerOperando" placeholder="Operador No. 1">
+            </div>
+            <div class="form-group">
+                <label for="operacion">Operación</label>
+                <select class="form-control" id="operacion">
+                    <option>-- Selecciona --</option>
+                    <option>+</option>
+                    <option>-</option>
+                    <option>*</option>
+                    <option>/</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="segundoOperando">Segundo operando</label>
+                <input type="number" class="form-control" id="segundoOperando" placeholder="Operador No. 2">
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn-calcular">Calcular</button>
+                <button type="reset" class="btn-reiniciar">Reiniciar</button>
+            </div>
+            <div class="resultado-container">
+                <div class="resultado-label">Resultado</div>
+                <div class="form-control" id="resultado"></div>
+            </div>
+            <div class="estado-colores">
+                <div class="ok">OK</div>
+                <div class="empty">Empty</div>
+                <div class="positive">Positive</div>
+                <div class="negative">Negative</div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        const botonCalcular = document.querySelector('.btn-calcular');
+        const primerOperandoInput = document.getElementById('primerOperando');
+        const segundoOperandoInput = document.getElementById('segundoOperando');
+        const operacionSelect = document.getElementById('operacion');
+        const resultadoDiv = document.getElementById('resultado');
+        const okDiv = document.querySelector('.ok');
+        const emptyDiv = document.querySelector('.empty');
+        const positiveDiv = document.querySelector('.positive');
+        const negativeDiv = document.querySelector('.negative');
+
+        function resetEstadoColores() {
+            okDiv.style.backgroundColor = '';
+            emptyDiv.style.backgroundColor = 'lightgray';
+            positiveDiv.style.backgroundColor = 'lightgray';
+            negativeDiv.style.backgroundColor = 'lightgray';
+        }
+
+        botonCalcular.addEventListener('click', () => {
+            const num1 = parseFloat(primerOperandoInput.value);
+            const num2 = parseFloat(segundoOperandoInput.value);
+            const operacion = operacionSelect.value;
+            let resultado;
+
+            resetEstadoColores(); // Reinicia los colores antes de cada cálculo
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado = 'Por favor, introduce números válidos.';
+                emptyDiv.style.backgroundColor = 'yellow';
+            } else if (operacion === '-- Selecciona --') {
+                resultado = 'Selecciona una operación.';
+                emptyDiv.style.backgroundColor = 'yellow';
+            } else {
+                switch (operacion) {
+                    case '+':
+                        resultado = num1 + num2;
+                        break;
+                    case '-':
+                        resultado = num1 - num2;
+                        break;
+                    case '*':
+                        resultado = num1 * num2;
+                        break;
+                    case '/':
+                        if (num2 === 0) {
+                            resultado = '¡División por cero!';
+                            negativeDiv.style.backgroundColor = 'black';
+                            negativeDiv.style.color = 'white'; // Para que se vea el texto "Negative"
+                        } else {
+                            resultado = num1 / num2;
+                        }
+                        break;
+                    default:
+                        resultado = 'Operación no válida.';
+                        emptyDiv.style.backgroundColor = 'yellow';
+                }
+
+                if (typeof resultado === 'number') {
+                    okDiv.style.backgroundColor = 'lightgreen';
+                    if (resultado >= 0) {
+                        positiveDiv.style.backgroundColor = 'yellow';
+                    } else {
+                        negativeDiv.style.backgroundColor = 'black';
+                        negativeDiv.style.color = 'white'; // Para que se vea el texto "Negative"
+                    }
+                }
+            }
+            resultadoDiv.textContent = resultado;
+        });
+
+        // Asegurarse de que los colores se reinicien al cargar la página o al reiniciar el formulario
+        const botonReiniciar = document.querySelector('.btn-reiniciar');
+        botonReiniciar.addEventListener('click', resetEstadoColores);
+        resetEstadoColores(); // Inicializar los colores
+    </script>
+</body>
+</html>
